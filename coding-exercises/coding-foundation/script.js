@@ -6,6 +6,9 @@ document.getElementById("confirm-button").addEventListener("click", () => {
             let ele = document.createElement('div');
             ele.classList.add("squares-container__square");
             document.getElementById("squares-container").appendChild(ele);
+            setTimeout(() => {
+                ele.style.opacity = "100%";
+            }, 20 * i);
         }
     }
 });
