@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+}
+
+.input-container {
+    height: 70px;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.images-container {
+    height: calc(100vh - 110px);
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.images-container__image {
+    width: available;
+    min-width: 0;
+    max-width: 180px;
+}
