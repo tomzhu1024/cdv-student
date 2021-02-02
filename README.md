@@ -8,6 +8,7 @@ Among other things, I will link to Coding Exercises and Projects:
 
 - [coding-foundation](https://tomzhu1024.github.io/cdv-student/coding-exercises/coding-foundation/)
 - [goat](https://tomzhu1024.github.io/cdv-student/coding-exercises/goat/)
+- [coding-exercise-2](https://tomzhu1024.github.io/cdv-student/coding-exercises/coding-exercise-2/)
 
 
 ---
