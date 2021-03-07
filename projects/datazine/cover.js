@@ -51,7 +51,7 @@ svg.append('text')
     .style('text-shadow', '0 0 5px ' + '#ffe89d');
 
 svg.append('text')
-    .text('Did I Saw?')
+    .text('Did I See?')
     .style('transform', 'translate(650px, 275px)')
     .style('font-family', '\'Akaya Kanadaka\', cursive')
     .style('font-size', 100)
