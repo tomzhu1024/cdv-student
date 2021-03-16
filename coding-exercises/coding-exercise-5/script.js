@@ -114,9 +114,9 @@ function gotData(incomingData) {
             .text(d => d.Country)
             .attr('fill', d => cMap[d.continent])
             .style('font-family', 'sans-serif')
-            .style('text-shadow', '1px 1px 2px rgba(0, 0, 0, 0.1)')
-            .style('transform', 'translate(7px, 6px)')
-            .attr('opacity', 0.5);
+            .style('text-shadow', '1px 1px 2px rgba(0, 0, 0, 0.75)')
+            .style('transform', d => `translate(${2 + rScale(d.pop)}px, 6px)`)
+            .attr('opacity', 0.75);
 
         enteringElements
             .attr('transform', `translate(${xScale(fertExtent[0])}, ${yScale(lifeExtent[0])})`)
