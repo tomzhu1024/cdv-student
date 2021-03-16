@@ -112,9 +112,9 @@ function gotData(incomingData) {
 
         enteringElements.append('text')
             .text(d => d.Country)
-            .attr('fill', d => cMap[d.continent])
+            .attr('fill', '#646464')
             .style('font-family', 'sans-serif')
-            .style('text-shadow', '1px 1px 2px rgba(0, 0, 0, 0.75)')
+            .style('text-shadow', '1px 1px 2px rgba(250, 250, 250, 0.75)')
             .style('transform', d => `translate(${2 + rScale(d.pop)}px, 6px)`)
             .attr('opacity', 0.75);
 
