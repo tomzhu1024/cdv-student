@@ -9,6 +9,11 @@ Among other things, I will link to Coding Exercises and Projects:
 - [coding-foundation](https://tomzhu1024.github.io/cdv-student/coding-exercises/coding-foundation/)
 - [goat](https://tomzhu1024.github.io/cdv-student/coding-exercises/goat/)
 - [coding-exercise-2](https://tomzhu1024.github.io/cdv-student/coding-exercises/coding-exercise-2/)
+- [coding-exercise-3](https://tomzhu1024.github.io/cdv-student/coding-exercises/coding-exercise-3/)
+- [coding-exercise-4](https://tomzhu1024.github.io/cdv-student/coding-exercises/coding-exercise-4/)
+- [coding-exercise-5](https://tomzhu1024.github.io/cdv-student/coding-exercises/coding-exercise-5/)
+- [coding-exercise-6](https://tomzhu1024.github.io/cdv-student/coding-exercises/coding-exercise-6/)
+- [data-zine](https://tomzhu1024.github.io/cdv-student/projects/datazine/)
 
 
 ---
