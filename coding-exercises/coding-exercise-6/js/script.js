@@ -8,7 +8,7 @@ console.log("data:", typeof data !== 'undefined' ? data : "nothing here");
 console.log(typeof data !== 'undefined' ? "seems like it ;-) it comes from the dataManager.js script." : "...damnit! let's see what is going wrong in the dataManager.js script.");
 
 // function to redraw data points
-async function updateVisualization() {
+const updateVisualization = _.debounce(() => {
     // now comes the interesting part, WATCH OUT! i'll go slow
     // we have the page (with nothing on it) and we have data
     // we *toss* it both to D3 and let it do its evaluation about
@@ -83,6 +83,7 @@ async function updateVisualization() {
         .attr("transform", d => `translate(${xScale(d.key)}, ${(h - padding)})`);
     enteringGroups
         .append("rect")
+        .classed("bar", true)
         .attr("width", () => xScale.bandwidth())
         .attr("y", 0)
         .attr("height", 0)
@@ -90,7 +91,7 @@ async function updateVisualization() {
         .transition()
         .delay(numExitingElements > 0 ? 600 : 0)
         .ease(d3.easeBounceOut)
-        .duration(1000)
+        .duration(600)
         .attr("y", d => -yScale(d.value))
         .attr("height", d => yScale(d.value))
     ;
@@ -103,8 +104,8 @@ async function updateVisualization() {
         .attr("opacity", 1)
         .transition()
         .ease(d3.easePolyOut)
-        .delay(900)
-        .duration(1400)
+        .delay(400)
+        .duration(700)
         .attr("y", d => -yScale(d.value))
         .attr("height", d => yScale(d.value))
         .attr("opacity", 0)
@@ -130,7 +131,7 @@ async function updateVisualization() {
         .delay(numExitingElements > 0 ? 600 : 0)
         .attr("transform", d => `translate(${xScale(d.key)}, ${(h - padding)})`)
     ;
-    elementsForPage.selectAll("rect")
+    elementsForPage.selectAll(".bar")
         .transition()
         .delay(numExitingElements > 0 ? 600 : 0)
         .attr("width", () => xScale.bandwidth())
@@ -138,7 +139,7 @@ async function updateVisualization() {
         .attr("y", d => -yScale(d.value))
         .attr("height", d => yScale(d.value))
     ;
-}
+}, 100, {leading: true});
 
 // binding functions to the buttons on the page
 // the functions we use to do the actual work are defined in dataManager.js
