@@ -60,6 +60,11 @@ function gotData(incomingData) {
         .attr("fill", 'none')
         .attr("stroke", "#0a2f9b")
         .attr("stroke-width", 5)
+        .attr("opacity", 0)
+        .transition()
+        .delay(500)
+        .duration(500)
+        .attr("opacity", 1)
     ;
 
     const updateGraph = (index) => {
