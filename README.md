@@ -14,6 +14,7 @@ Among other things, I will link to Coding Exercises and Projects:
 - [coding-exercise-5](https://tomzhu1024.github.io/cdv-student/coding-exercises/coding-exercise-5/)
 - [coding-exercise-6](https://tomzhu1024.github.io/cdv-student/coding-exercises/coding-exercise-6/)
 - [coding-exercise-7](https://tomzhu1024.github.io/cdv-student/coding-exercises/coding-exercise-7/)
+- [coding-exercise-8](https://tomzhu1024.github.io/cdv-student/coding-exercises/coding-exercise-8/)
 - [data-zine](https://tomzhu1024.github.io/cdv-student/projects/datazine/)
 
 
