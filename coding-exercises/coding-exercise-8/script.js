@@ -3,9 +3,6 @@ let h = 800;
 let padding = 90
 
 // SVG
-
-
-
 function projectionTween(projection0, projection1) {
     return function (d) {
         let t = 0;
@@ -49,24 +46,12 @@ d3.json("countries.geojson").then((geoData) => {
             .style("width", w)
             .style("height", h)
             .style("background-color", "lavender");
-        let group = viz.append("g")
-            .on("wheel.zoom",function() {
-                var currScale = projections[currentProjection].scale();
-                var newScale = currScale - 2 * event.deltaY;
-                var currTranslate = projections[currentProjection].translate();
-                var coords = projections[currentProjection].invert([event.offsetX, event.offsetY]);
-                projections[currentProjection].scale(newScale);
-                var newPos = projections[currentProjection](coords);
-
-                projections[currentProjection].translate([currTranslate[0] + (event.offsetX - newPos[0]), currTranslate[1] + (event.offsetY - newPos[1])]);
-                group.selectAll("path").attr("d", pathMaker);
-            })
 
         console.log(geoData);
         console.log(incomingData);
 
 
-        group.selectAll(".provinces").data(geoData.features).enter()
+        viz.selectAll(".provinces").data(geoData.features).enter()
             .append("path")
             .attr("class", "provinces")
             .attr("d", pathMaker)
@@ -76,7 +61,7 @@ d3.json("countries.geojson").then((geoData) => {
 
         document.getElementById('proj1').addEventListener('click', () => {
             if (currentProjection !== 0) {
-                group.selectAll(".provinces")
+                viz.selectAll(".provinces")
                     .transition()
                     .duration(1000)
                     .ease(d3.easeLinear)
@@ -87,7 +72,7 @@ d3.json("countries.geojson").then((geoData) => {
         });
         document.getElementById('proj2').addEventListener('click', () => {
             if (currentProjection !== 1) {
-                group.selectAll(".provinces")
+                viz.selectAll(".provinces")
                     .transition()
                     .duration(1000)
                     .ease(d3.easeLinear)
@@ -98,7 +83,7 @@ d3.json("countries.geojson").then((geoData) => {
         });
         document.getElementById('proj3').addEventListener('click', () => {
             if (currentProjection !== 2) {
-                group.selectAll(".provinces")
+                viz.selectAll(".provinces")
                     .transition()
                     .duration(1000)
                     .ease(d3.easeLinear)
